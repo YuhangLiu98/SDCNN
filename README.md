@@ -26,4 +26,3 @@ https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/
 
 <img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/result1.png" width="800"/>   
 <img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/result2.png" width="800"/>   
-<img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/result3.png" width="800"/>   
