@@ -35,4 +35,4 @@ https://github.com/xinario/SAGAN?tab=readme-ov-file
 <img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/result2.png" width="800"/>   
 
 ## Acknowledgments
-Our code is inspired by [RED-CNN](https://github.com/SSinyu/RED-CNN/).
+Code borrows heavily from [RED-CNN](https://github.com/SSinyu/RED-CNN/).
