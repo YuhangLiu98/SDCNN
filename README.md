@@ -17,6 +17,7 @@ Abstract: Low-dose computed tomography (LDCT) reduces radiation exposure but suf
 https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/
 
 2.The Piglet Low Dose CT by X. Yi and P. Babyn, "Sharpness-aware low-dose CT denoising using conditional generative adversarial network"
+
 (I can't share this data, you should ask at the URL below if you want)  
 https://github.com/xinario/SAGAN?tab=readme-ov-file
 
