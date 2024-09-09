@@ -82,7 +82,54 @@ class Trainer(BaseTrainer):
 
             self.optimizer.zero_grad()
 
-            '''待发布'''
+            noise_w, noise_b, clean = self.model(input_noisy)
+            clean = torch.max(clean, torch.tensor([0.]).cuda())
+
+            noise_w1, noise_b1, clean1 = self.model(((clean)))
+            noise_w2, noise_b2, clean2 = self.model(((clean + noise_w)))  # 1
+            noise_w3, noise_b3, clean3 = self.model(((noise_b)))
+
+            noise_w4, noise_b4, clean4 = self.model(((clean + noise_w - noise_b)))  # 2
+            noise_w5, noise_b5, clean5 = self.model(((clean - noise_w + noise_b)))  # 3
+            noise_w6, noise_b6, clean6 = self.model(((clean - noise_w - noise_b)))  # 4
+            noise_w10, noise_b10, clean10 = self.model(((clean + noise_w + noise_b)))  # 5
+
+            noise_w7, noise_b7, clean7 = self.model(((clean + noise_b)))  # 6
+            noise_w8, noise_b8, clean8 = self.model(((clean - noise_b)))  # 7
+            noise_w9, noise_b9, clean9 = self.model(((clean - noise_w)))  # 8
+            clean1 = torch.max(clean1, torch.tensor([0.]).cuda())
+            clean2 = torch.max(clean2, torch.tensor([0.]).cuda())
+            clean3 = torch.max(clean3, torch.tensor([0.]).cuda())
+            clean4 = torch.max(clean4, torch.tensor([0.]).cuda())
+            clean5 = torch.max(clean5, torch.tensor([0.]).cuda())
+            clean6 = torch.max(clean6, torch.tensor([0.]).cuda())
+            clean7 = torch.max(clean7, torch.tensor([0.]).cuda())
+            clean8 = torch.max(clean8, torch.tensor([0.]).cuda())
+            clean9 = torch.max(clean9, torch.tensor([0.]).cuda())
+            clean10 = torch.max(clean10, torch.tensor([0.]).cuda())
+
+            input_noisy_pred = clean + noise_w + noise_b
+
+            loss = self.criterion[0](input_noisy, input_noisy_pred, clean, clean1, clean2, clean3, noise_b, noise_b1,
+                                     noise_b2, noise_b3, noise_w, noise_w1, noise_w2)
+
+            loss_neg1 = self.criterion[1](clean, clean4, noise_w, noise_w4, noise_b, -noise_b4)
+            loss_neg2 = self.criterion[1](clean, clean5, noise_w, -noise_w5, noise_b, noise_b5)
+            loss_neg3 = self.criterion[1](clean, clean6, noise_w, -noise_w6, noise_b, -noise_b6)
+            
+            loss_neg4 = self.criterion[1](clean, clean7, torch.zeros_like(noise_w), noise_w7, noise_b, noise_b7)
+            loss_neg5 = self.criterion[1](clean, clean8, torch.zeros_like(noise_w), noise_w8, noise_b, -noise_b8)
+            loss_neg6 = self.criterion[1](clean, clean9, -noise_w, noise_w9, torch.zeros_like(noise_b), noise_b9)
+            loss_neg7 = self.criterion[1](clean, clean10, noise_w, noise_w10, noise_b, noise_b10)
+            loss_aug = (loss_neg1 + loss_neg2 + loss_neg3 + loss_neg4 + loss_neg5 + loss_neg6 + loss_neg7)
+            
+            loss_TV = gradient(clean)
+          
+            loss_dis = self.criterion[3](clean, noise_b)
+            loss_dis_1 = self.criterion[3](clean, noise_w)
+
+            loss_total = 1.5*loss + .4 *loss_aug  + .0001 * loss_TV + .0001*loss_dis+.0001*loss_dis_1
+            loss_total.backward()
 
             self.optimizer.step()
 
@@ -134,7 +181,7 @@ class Trainer(BaseTrainer):
             input_GT = self.trunc(self.denormalize_(input_GT.cpu().detach()))
             input_noisy = self.trunc(self.denormalize_(input_noisy.cpu().detach()))
 
-            # red-cnn指标计算
+            # evaluation
             original_result, pred_result = compute_measure(input_noisy, input_GT, clean, 400)
             ori_psnr_avg += original_result[0]
             ori_ssim_avg += original_result[1]
