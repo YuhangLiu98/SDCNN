@@ -8,6 +8,7 @@ Abstract: Low-dose computed tomography (LDCT) reduces radiation exposure but suf
 <img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/SDCNN.png" width="800"/> 
 </div>
 ***************************************************************************
+
 ### DATASET
 
 1.The Mayo Clinic Low Dose CT by Mayo Clinic   
