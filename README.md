@@ -22,14 +22,19 @@ https://github.com/xinario/SAGAN?tab=readme-ov-file
 
 -------
 ## Installation
-[Pytorch](https://pytorch.org/) is required, for example,
-```shell script
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-```
-Then, SDCNN can be installed from source,
+
+SDCNN can be installed from source,
 ```shell
 git clone https://github.com/YuhangLiu98/SDCNN.git
 cd src
+```
+Then, [Pytorch](https://pytorch.org/) is required, for example,
+```shell script
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+Lastly, other pakages are required,
+```shell script
+pip install -r requirements.txt
 ```
 -------
 
