@@ -21,6 +21,18 @@ https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/
 https://github.com/xinario/SAGAN?tab=readme-ov-file
 
 -------
+## Installation
+[Pytorch](https://pytorch.org/) is required, for example,
+```shell script
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt 
+```
+Then, SDCNN can be installed from source,
+```shell
+git clone https://github.com/YuhangLiu98/SDCNN.git
+cd src
+```
+-------
 
 ## Use
 
