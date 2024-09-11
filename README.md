@@ -7,7 +7,6 @@ Abstract: Low-dose computed tomography (LDCT) reduces radiation exposure but suf
 <div align=center>
 <img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/SDCNN.png" width="800"/> 
 </div>
------
 
 ### DATASET
 
