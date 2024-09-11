@@ -7,7 +7,17 @@ Abstract: Low-dose computed tomography (LDCT) reduces radiation exposure but suf
 <div align=center>
 <img src="https://github.com/YuhangLiu98/SDCNN/blob/main/img/SDCNN.png" width="800"/> 
 </div>
+-----
 
+### DATASET
+
+1.The Mayo Clinic Low Dose CT by Mayo Clinic   
+(I can't share this data, you should ask at the URL below if you want)  
+https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/
+
+2.The Piglet Low Dose CT by X. Yi and P. Babyn, "Sharpness-aware low-dose CT denoising using conditional generative adversarial network"
+(I can't share this data, you should ask at the URL below if you want)  
+https://github.com/xinario/SAGAN?tab=readme-ov-file
 
 
 -------
@@ -26,17 +36,7 @@ Lastly, other pakages are required,
 ```shell script
 pip install -r requirements.txt
 ```
------
 
-### DATASET
-
-1.The Mayo Clinic Low Dose CT by Mayo Clinic   
-(I can't share this data, you should ask at the URL below if you want)  
-https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/
-
-2.The Piglet Low Dose CT by X. Yi and P. Babyn, "Sharpness-aware low-dose CT denoising using conditional generative adversarial network"
-(I can't share this data, you should ask at the URL below if you want)  
-https://github.com/xinario/SAGAN?tab=readme-ov-file
 -------
 
 ## Use
