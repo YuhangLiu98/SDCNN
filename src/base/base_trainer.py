@@ -166,7 +166,7 @@ class BaseTrainer:
         self.model.load_state_dict(checkpoint['state_dict'], strict=False)
         if self.is_test == True:
             self.model = self.model.genclean
-            self.logger.info("Checkpoint loaded. Testing from epoch {}".format(self.start_epoch))
+            self.logger.info("Checkpoint loaded. Testing from epoch {}".format(self.start_epoch-1))
         else:
             # load optimizer state from checkpoint only when optimizer type is not changed.
             if checkpoint['config']['optimizer']['type'] != self.config['optimizer']['type']:
