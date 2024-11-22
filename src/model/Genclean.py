@@ -182,8 +182,6 @@ class Genclean(nn.Module):
         out_7_log = self.relu(self.conv_p7_e(out_6_log))
         out_7_log = self.relu(self.conv_f7_e(out_7_log))
         
-        out_8_log = self.relu(self.conv_p8_e(out_7_log))
-
         # ******************************************
         out_0 = self.conv0(x)  # 网络结构
 
