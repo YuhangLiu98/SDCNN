@@ -154,7 +154,6 @@ class Genclean(nn.Module):
         self.conv_p7_e = nn.Conv2d(out_ch, out_ch, kernel_size=1, stride=1, padding=0)
         self.conv_f7_e = nn.Conv2d(out_ch, out_ch, kernel_size=3, stride=1, padding=1)
 
-        self.conv_p8_e = nn.Conv2d(out_ch, out_ch, kernel_size=1, stride=1, padding=0)
         self.conv_f8_e = nn.Conv2d(out_ch, in_ch, kernel_size=3, stride=1, padding=1)
 
         self.relu = nn.LeakyReLU()
