@@ -55,7 +55,7 @@ if __name__ == '__main__':
                       help='path to latest checkpoint (default: None)')
     args.add_argument('-d', '--device', default='3', type=str,
                       help='indices of GPUs to enable (default: all)')
-    args.add_argument('-t', '--tag', default='SIDD_Val', type=str,
+    args.add_argument('-t', '--tag', default='Piglet_Val', type=str,
                       help='experience name in tensorboard (default: None)')
 
     # custom cli options to modify configuration from default values given in json file.
