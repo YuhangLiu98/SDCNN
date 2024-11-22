@@ -49,13 +49,13 @@ def main(config):
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser(description='PyTorch Template')
-    args.add_argument('-c', '--config', default='config_SIDD_Val.json', type=str,
+    args.add_argument('-c', '--config', default='config_MAYO_Val.json', type=str,
                       help='config file path (default: None)')
     args.add_argument('-r', '--resume', default=None, type=str,
                       help='path to latest checkpoint (default: None)')
-    args.add_argument('-d', '--device', default='3', type=str,
+    args.add_argument('-d', '--device', default='0', type=str,
                       help='indices of GPUs to enable (default: all)')
-    args.add_argument('-t', '--tag', default='Piglet_Val', type=str,
+    args.add_argument('-t', '--tag', default='MAYO_Val', type=str,
                       help='experience name in tensorboard (default: None)')
 
     # custom cli options to modify configuration from default values given in json file.
