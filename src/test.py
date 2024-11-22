@@ -47,9 +47,9 @@ def main(config):
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser(description='PyTorch Template')
-    args.add_argument('-c', '--config', default='./config.json', type=str,
+    args.add_argument('-c', '--config', default='../models/SDCNN/1122_182149/Piglet_Val/config.json', type=str,
                       help='config file path (default: None)')
-    args.add_argument('-r', '--resume', default='./checkpoint-epoch230.pth', type=str,
+    args.add_argument('-r', '--resume', default='../models/SDCNN/1122_182149/Piglet_Val/checkpoint-epoch230.pth', type=str,
                       help='path to latest checkpoint (default: None)')
     args.add_argument('-d', '--device', default='0', type=str,
                       help='indices of GPUs to enable (default: all)')
