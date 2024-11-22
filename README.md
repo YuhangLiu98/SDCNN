@@ -28,7 +28,7 @@ https://github.com/xinario/SAGAN?tab=readme-ov-file
 SDCNN can be installed from source,
 ```shell
 git clone https://github.com/YuhangLiu98/SDCNN.git
-cd src
+cd SDCNN/src
 ```
 Then, [Pytorch](https://pytorch.org/) is required, for example,
 ```shell script
