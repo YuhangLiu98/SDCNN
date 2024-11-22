@@ -77,7 +77,7 @@ class Trainer(BaseTrainer):
 
         self.model.train()
         self.train_metrics.reset()
-        for batch_idx, (target, input_noisy, input_GT, input_normal) in enumerate(self.data_loader):
+        for batch_idx, (target, input_noisy, input_GT) in enumerate(self.data_loader):
             input_noisy = input_noisy.to(self.device)
 
             self.optimizer.zero_grad()
@@ -170,7 +170,7 @@ class Trainer(BaseTrainer):
         # with torch.no_grad():
         if save == True:
             os.makedirs('../output/C/' + str(epoch))
-        for batch_idx, (target, input_noisy, input_GT, input_normal) in enumerate(self.test_data_loader):
+        for batch_idx, (target, input_noisy, input_GT) in enumerate(self.test_data_loader):
             input_noisy = input_noisy.to(self.device)
             input_GT = input_GT.to(self.device)
 
