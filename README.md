@@ -56,12 +56,13 @@ pip install -r requirements.txt
 </div>
 
 ### Citation
+```shell
 @ARTICLE{10758838,
   author={Liu, Yuhang and Shu, Huazhong and Chi, Qiang and Zhang, Yue and Liu, Zidong and Wu, Fuzhi and Coatrieux, Jean-Louis and Liu, Yi and Wang, Lei and Zhang, Pengcheng and Gui, Zhiguo},
   journal={IEEE Transactions on Instrumentation and Measurement}, 
   title={SDCNN: Self-Supervised Disentangled Convolutional Neural Network for Low-Dose CT Denoising}, 
   year={2024},
   doi={10.1109/TIM.2024.3502758}}
-
+```
 ### Acknowlegements
 Code borrows heavily from [CVF-SID](https://github.com/Reyhanehne/CVF-SID_PyTorch)
