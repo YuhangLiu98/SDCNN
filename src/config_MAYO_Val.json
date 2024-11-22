@@ -8,7 +8,7 @@
     "data_loader": {
         "type": "DataLoader",
         "args": {
-            "data_dir": "/home/ac/data/lyh/npy_img_piglet_train_0.25/",
+            "data_dir": "/home/ac/data/lyh/npy_img_mayo_train/",
             "batch_size": 2,
             "shuffle": true,
             "num_workers": 0,
@@ -18,7 +18,7 @@
     "test_data_loader": {
         "type": "DataLoader",
         "args": {
-            "data_dir": "/home/ac/data/lyh/npy_img_piglet_test_0.25/",
+            "data_dir": "/home/ac/data/lyh/npy_img_mayo_test/",
             "batch_size":1,
             "shuffle": false,
             "num_workers": 0,
