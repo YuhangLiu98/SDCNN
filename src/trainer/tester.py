@@ -147,12 +147,13 @@ class Test(BaseTrainer):
             pred_psnr_avg / len(self.test_data_loader),
             pred_ssim_avg / len(self.test_data_loader),
             pred_rmse_avg / len(self.test_data_loader)))
+        print('\n')
         total_params = sum(p.numel() for p in self.model.parameters())
         model_parameters = filter(lambda p: p.requires_grad, self.model.parameters())
         trainable_params = sum([np.prod(p.size()) for p in model_parameters])
         print(f"Total parameters in the Genclean: {total_params}")
         print(f"Trainable parameters in the Genclean: {trainable_params}")
-
+        print('\n')
         input = torch.randn(1, 1, 512, 512).cuda()
         macs, _ = profile(self.model.cuda(), (input,))
         macs, _ = clever_format([macs, _], "%.3f")
@@ -195,4 +196,3 @@ class Test(BaseTrainer):
             current = batch_idx
             total = self.len_epoch
         return base.format(current, total, 100.0 * current / total)
-
