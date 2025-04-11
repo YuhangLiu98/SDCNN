@@ -61,7 +61,8 @@ pip install -r requirements.txt
   author={Liu, Yuhang and Shu, Huazhong and Chi, Qiang and Zhang, Yue and Liu, Zidong and Wu, Fuzhi and Coatrieux, Jean-Louis and Liu, Yi and Wang, Lei and Zhang, Pengcheng and Gui, Zhiguo},
   journal={IEEE Transactions on Instrumentation and Measurement}, 
   title={SDCNN: Self-Supervised Disentangled Convolutional Neural Network for Low-Dose CT Denoising}, 
-  year={2024},
+  year={2025},
+  volume={74},
   doi={10.1109/TIM.2024.3502758}}
 ```
 ### Acknowlegements
